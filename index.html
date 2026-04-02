@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inchang Baek – AI Researcher</title>
+  <meta name="description" content="Inchang Baek – Ph.D. Candidate at AI Graduate School, GIST. Research on Procedural Content Generation, Reinforcement Learning, and Game AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav>
+  <div class="nav-container">
+    <a class="nav-logo" href="#about">Inchang Baek</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <div class="about-container">
+    <div class="profile-card fade-up">
+      <div class="profile-img-wrapper">
+        <!-- Profile image: replace src with your actual photo -->
+        <span class="profile-initials">IB</span>
+      </div>
+      <div class="profile-name">Inchang Baek</div>
+      <div class="profile-title">Ph.D. Candidate</div>
+      <div class="profile-affiliation">AI Graduate School, GIST<br/>Gwangju Institute of Science and Technology</div>
+      <div class="social-links">
+        <a class="social-btn" href="https://scholar.google.com/citations?user=WlSkcAYAAAAJ" target="_blank">
+          🎓 Scholar
+        </a>
+        <a class="social-btn" href="mailto:bic4907@gist.ac.kr">
+          ✉️ Email
+        </a>
+        <a class="social-btn" href="https://github.com/bic4907" target="_blank">
+          💻 GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <h1>Inchang Baek</h1>
+      <p class="subtitle">AI Researcher · Procedural Content Generation · Game AI · Reinforcement Learning</p>
+      <p class="bio">
+        I am a Ph.D. Candidate at the AI Graduate School, Gwangju Institute of Science and Technology (GIST),
+        under the supervision of Prof. Kyung-Joong Kim. My research focuses on
+        <strong>Procedural Content Generation (PCG)</strong> using deep reinforcement learning and large language models,
+        with applications in game AI, automated level design, and intelligent tutoring systems.
+        I am particularly interested in leveraging LLMs for reward design and instruction-aware representation learning
+        to enable more flexible and human-aligned content generation.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-item fade-up">
+          <span class="stat-number">71</span>
+          <span class="stat-label">Total Citations</span>
+        </div>
+        <div class="stat-item fade-up">
+          <span class="stat-number">5</span>
+          <span class="stat-label">h-index</span>
+        </div>
+        <div class="stat-item fade-up">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Publications</span>
+        </div>
+      </div>
+
+      <div class="interests-list">
+        <span class="interest-tag">Procedural Content Generation</span>
+        <span class="interest-tag">Deep Reinforcement Learning</span>
+        <span class="interest-tag">Large Language Models</span>
+        <span class="interest-tag">Game AI</span>
+        <span class="interest-tag">Intelligent Tutoring</span>
+        <span class="interest-tag">Multi-Agent RL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== News ===== -->
+<section id="news">
+  <div class="section-container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Latest</span>
+      <h2 class="section-title">News & Updates</h2>
+    </div>
+    <div class="news-list">
+      <div class="news-item fade-up">
+        <div class="news-date">2026.01</div>
+        <div class="news-content">
+          <strong>GPTalk</strong> — "GPTalk: LLM-based virtual companions for metacognitive growth in self-regulated e-learning" accepted at <em>International Journal of Human-Computer Studies</em>.
+        </div>
+      </div>
+      <div class="news-item fade-up">
+        <div class="news-date">2025.08</div>
+        <div class="news-content">
+          Paper submitted: <strong>Multi-Objective Instruction-Aware Representation Learning in Procedural Content Generation RL</strong> (arXiv:2508.09193).
+        </div>
+      </div>
+      <div class="news-item fade-up">
+        <div class="news-date">2025.08</div>
+        <div class="news-content">
+          Paper submitted: <strong>Match-3 게임 플레이 테스트를 위한 오브젝트 특성 분류 기반 상태 표현 방법</strong> (arXiv:2508.09860).
+        </div>
+      </div>
+      <div class="news-item fade-up">
+        <div class="news-date">2025</div>
+        <div class="news-content">
+          <strong>IPCGRL</strong> accepted at <em>IEEE Transactions on Games</em> — Language-Instructed RL for Procedural Level Generation.
+        </div>
+      </div>
+      <div class="news-item fade-up">
+        <div class="news-date">2025</div>
+        <div class="news-content">
+          <strong>Seamless Tutorial</strong> accepted at <em>IEEE Conference on Games (CoG) 2025</em>.
+        </div>
+      </div>
+      <div class="news-item fade-up">
+        <div class="news-date">2025.02</div>
+        <div class="news-content">
+          Preprint: <strong>PCGRLLM</strong> — LLM-Driven Reward Design for PCG RL (arXiv:2502.10906).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Publications ===== -->
+<section id="publications">
+  <div class="section-container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Research Output</span>
+      <h2 class="section-title">Publications</h2>
+      <p class="section-desc">Journals, conference papers, preprints, and patents. <a href="https://scholar.google.com/citations?user=WlSkcAYAAAAJ" target="_blank">View on Google Scholar ↗</a></p>
+    </div>
+
+    <div class="pub-filters fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="journal">Journal</button>
+      <button class="filter-btn" data-filter="conference">Conference</button>
+      <button class="filter-btn" data-filter="preprint">Preprint</button>
+      <button class="filter-btn" data-filter="domestic">Domestic</button>
+      <button class="filter-btn" data-filter="patent">Patent</button>
+    </div>
+
+    <div class="pub-list">
+
+      <!-- 2026 -->
+      <div class="pub-card fade-up" data-type="journal">
+        <div class="pub-year-badge">2026</div>
+        <div class="pub-content">
+          <div class="pub-title">GPTalk: LLM-based virtual companions for metacognitive growth in self-regulated e-learning</div>
+          <div class="pub-authors">IT Jung, CH Lee, <strong>IC Baek</strong>, D Oh, Y Choi, KJ Kim, DJ Kong, JH Hong</div>
+          <div class="pub-venue">International Journal of Human-Computer Studies, 103754</div>
+          <div class="pub-tags">
+            <span class="pub-tag journal">Journal</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="pub-card fade-up" data-type="preprint">
+        <div class="pub-year-badge">2025</div>
+        <div class="pub-content">
+          <div class="pub-title">Multi-Objective Instruction-Aware Representation Learning in Procedural Content Generation RL</div>
+          <div class="pub-authors">SH Kim, <strong>IC Baek</strong>, SY Lee, GH Hwang, KJ Kim</div>
+          <div class="pub-venue">arXiv preprint arXiv:2508.09193</div>
+          <div class="pub-tags">
+            <span class="pub-tag preprint">Preprint</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="preprint">
+        <div class="pub-year-badge">2025</div>
+        <div class="pub-content">
+          <div class="pub-title">Match-3 게임 플레이 테스트를 위한 오브젝트 특성 분류 기반 상태 표현 방법</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, S Lee, SH Kim, G Hwang, KJ Kim</div>
+          <div class="pub-venue">arXiv preprint arXiv:2508.09860</div>
+          <div class="pub-tags">
+            <span class="pub-tag preprint">Preprint</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="preprint">
+        <div class="pub-year-badge">2025</div>
+        <div class="pub-content">
+          <div class="pub-title">A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation</div>
+          <div class="pub-authors">E Kwon, S Oh, <strong>IC Baek</strong>, Y Park, G Kim, JY Moon, Y Choi, KJ Kim</div>
+          <div class="pub-venue">arXiv preprint arXiv:2510.25725</div>
+          <div class="pub-tags">
+            <span class="pub-tag preprint">Preprint</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="journal">
+        <div class="pub-year-badge">2025</div>
+        <div class="pub-content">
+          <div class="pub-title">IPCGRL: Language-Instructed Reinforcement Learning for Procedural Level Generation</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, T Park, KJ Kim</div>
+          <div class="pub-venue">IEEE Transactions on Games</div>
+          <div class="pub-tags">
+            <span class="pub-tag journal">Journal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="conference">
+        <div class="pub-year-badge">2025</div>
+        <div class="pub-content">
+          <div class="pub-title">Seamless Tutorial: Contextual State Transition Generation Based on Player Internal Knowledge</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, TH Park, TG Ha, KJ Kim</div>
+          <div class="pub-venue">2025 IEEE Conference on Games (CoG), 1–8</div>
+          <div class="pub-tags">
+            <span class="pub-tag conference">Conference</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="preprint">
+        <div class="pub-year-badge">2025</div>
+        <div class="pub-content">
+          <div class="pub-title">PCGRLLM: Large Language Model-Driven Reward Design for Procedural Content Generation Reinforcement Learning</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, SH Kim, S Earle, Z Jiang, JH Noh, J Togelius, KJ Kim</div>
+          <div class="pub-venue">arXiv preprint arXiv:2502.10906</div>
+          <div class="pub-tags">
+            <span class="pub-tag preprint">Preprint</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="pub-card fade-up" data-type="conference">
+        <div class="pub-year-badge">2024</div>
+        <div class="pub-content">
+          <div class="pub-title">ChatPCG: Large Language Model-Driven Reward Design for Procedural Content Generation</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, TH Park, JH Noh, CM Bae, KJ Kim</div>
+          <div class="pub-venue">2024 IEEE Conference on Games (CoG), 1–4</div>
+          <div class="pub-tags">
+            <span class="pub-tag conference">Conference</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="pub-card fade-up" data-type="journal">
+        <div class="pub-year-badge">2023</div>
+        <div class="pub-content">
+          <div class="pub-title">RaidEnv: Exploring New Challenges in Automated Content Balancing for Boss Raid Games</div>
+          <div class="pub-authors">HC Jeon, <strong>IC Baek</strong>, C Bae, T Park, W You, T Ha, H Jung, J Noh, S Oh, ...</div>
+          <div class="pub-venue">IEEE Transactions on Games 16 (3), 645–658</div>
+          <div class="pub-tags">
+            <span class="pub-tag journal">Journal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="preprint">
+        <div class="pub-year-badge">2023</div>
+        <div class="pub-content">
+          <div class="pub-title">Human-Aligned Procedural Level Generation Reinforcement Learning via Text-Level-Sketch Shared Representation</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, TH Park, KJ Kim</div>
+          <div class="pub-venue">Available at SSRN 4676403</div>
+          <div class="pub-tags">
+            <span class="pub-tag preprint">Preprint</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="pub-card fade-up" data-type="conference">
+        <div class="pub-year-badge">2022</div>
+        <div class="pub-content">
+          <div class="pub-title">Toward Cooperative Level Generation in Multiplayer Games: A User Study in Overcooked!</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, TG Ha, TH Park, KJ Kim</div>
+          <div class="pub-venue">2022 IEEE Conference on Games (CoG), 276–283</div>
+          <div class="pub-tags">
+            <span class="pub-tag conference">Conference</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="conference">
+        <div class="pub-year-badge">2022</div>
+        <div class="pub-content">
+          <div class="pub-title">Turing Test Framework for Cooperative Games</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, TH Park, TG Ha, KJ Kim</div>
+          <div class="pub-venue">2022 IEEE Conference on Games (CoG), 568–569</div>
+          <div class="pub-tags">
+            <span class="pub-tag conference">Conference</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="journal">
+        <div class="pub-year-badge">2022</div>
+        <div class="pub-content">
+          <div class="pub-title">A Swapping Target Q-Value Technique for Data Augmentation in Offline Reinforcement Learning</div>
+          <div class="pub-authors">HT Joo, <strong>IC Baek</strong>, KJ Kim</div>
+          <div class="pub-venue">IEEE Access 10, 57369–57382</div>
+          <div class="pub-tags">
+            <span class="pub-tag journal">Journal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="conference">
+        <div class="pub-year-badge">2022</div>
+        <div class="pub-content">
+          <div class="pub-title">Efficient Multi-Agent Reinforcement Learning Using Clustering for Many Agents</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, KJ Kim</div>
+          <div class="pub-venue">AIIDE-19 Workshop on Artificial Intelligence for Strategy Games, 1–7</div>
+          <div class="pub-tags">
+            <span class="pub-tag conference">Conference</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="patent">
+        <div class="pub-year-badge">2022</div>
+        <div class="pub-content">
+          <div class="pub-title">스케치 이미지 스타일 변환 장치 및 방법</div>
+          <div class="pub-authors">김기홍, 김경중, 박동혁, 박태화, 백인창, 유원상</div>
+          <div class="pub-venue">KR Patent 1,025,812,110,000</div>
+          <div class="pub-tags">
+            <span class="pub-tag patent">Patent</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="domestic">
+        <div class="pub-year-badge">2022</div>
+        <div class="pub-content">
+          <div class="pub-title">파동함수 붕괴 알고리즘을 이용한 소형 디자인기반 대규모 게임 맵 자동생성</div>
+          <div class="pub-authors">유병화, 하태관, 박태화, 백인창, 김경중</div>
+          <div class="pub-venue">한국정보과학회 학술발표논문집, 1037–1039</div>
+          <div class="pub-tags">
+            <span class="pub-tag domestic">Domestic</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="pub-card fade-up" data-type="domestic">
+        <div class="pub-year-badge">2021</div>
+        <div class="pub-content">
+          <div class="pub-title">Personalized In-Game Tutorial Generation Through Incorporation of Procedural Context Generator with Player Student Model</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, TG Ha, KJ Kim</div>
+          <div class="pub-venue">한국정보과학회 학술발표논문집, 611–613</div>
+          <div class="pub-tags">
+            <span class="pub-tag domestic">Domestic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card fade-up" data-type="domestic">
+        <div class="pub-year-badge">2021</div>
+        <div class="pub-content">
+          <div class="pub-title">심층 강화학습의 일반화를 위한 물리기반 3차원 미로게임 환경</div>
+          <div class="pub-authors">박현, 한이삭, 백인창, 김경중</div>
+          <div class="pub-venue">한국정보과학회 학술발표논문집, 1398–1400</div>
+          <div class="pub-tags">
+            <span class="pub-tag domestic">Domestic</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2019 -->
+      <div class="pub-card fade-up" data-type="conference">
+        <div class="pub-year-badge">2019</div>
+        <div class="pub-content">
+          <div class="pub-title">An Evolutionary Approach for Procedural Content Generation in Cooperative Game Overcooked</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, KJ Kim</div>
+          <div class="pub-venue">AIIDE-19 Workshop on Artificial Intelligence for Strategy Games, 1–7</div>
+          <div class="pub-tags">
+            <span class="pub-tag conference">Conference</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2018 -->
+      <div class="pub-card fade-up" data-type="conference">
+        <div class="pub-year-badge">2018</div>
+        <div class="pub-content">
+          <div class="pub-title">Web-Based Interface for Data Labeling in StarCraft</div>
+          <div class="pub-authors"><strong>IC Baek</strong>, KJ Kim</div>
+          <div class="pub-venue">2018 IEEE Conference on Computational Intelligence and Games (CIG), 1–2</div>
+          <div class="pub-tags">
+            <span class="pub-tag conference">Conference</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end pub-list -->
+  </div>
+</section>
+
+<!-- ===== Research ===== -->
+<section id="research">
+  <div class="section-container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Interests</span>
+      <h2 class="section-title">Research Areas</h2>
+      <p class="section-desc">My research sits at the intersection of game AI, reinforcement learning, and large language models.</p>
+    </div>
+    <div class="research-grid">
+      <div class="research-card fade-up">
+        <span class="research-icon">🎮</span>
+        <h3>Procedural Content Generation</h3>
+        <p>Designing automated systems that generate game levels, environments, and content using reinforcement learning and evolutionary algorithms. Focusing on human-aligned and instruction-following PCG via LLMs.</p>
+      </div>
+      <div class="research-card fade-up">
+        <span class="research-icon">🤖</span>
+        <h3>Deep Reinforcement Learning</h3>
+        <p>Developing novel RL algorithms including offline RL data augmentation, multi-agent RL with clustering, and reward shaping techniques for complex game environments.</p>
+      </div>
+      <div class="research-card fade-up">
+        <span class="research-icon">🧠</span>
+        <h3>Large Language Models for Game AI</h3>
+        <p>Leveraging LLMs (e.g., GPT) for automatic reward function design, procedural level generation guidance, and natural language-based game content creation.</p>
+      </div>
+      <div class="research-card fade-up">
+        <span class="research-icon">📚</span>
+        <h3>Intelligent Tutoring Systems</h3>
+        <p>Building personalized in-game tutorial generators that adapt to player knowledge states, integrating student models with procedural context generation for seamless learning experiences.</p>
+      </div>
+      <div class="research-card fade-up">
+        <span class="research-icon">👥</span>
+        <h3>Cooperative Game AI</h3>
+        <p>Investigating cooperative level generation and AI agents in multiplayer settings (e.g., Overcooked), including Turing test frameworks for evaluating human-likeness in cooperative play.</p>
+      </div>
+      <div class="research-card fade-up">
+        <span class="research-icon">🔬</span>
+        <h3>Multi-Agent Reinforcement Learning</h3>
+        <p>Scaling MARL to many-agent environments using clustering-based approaches, and developing evaluation methodologies for emergent cooperative behaviors in complex game scenarios.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+  <div class="section-container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h3>Let's Connect</h3>
+        <p>I'm always open to research collaborations, academic discussions, and new opportunities. Feel free to reach out!</p>
+        <div class="contact-items">
+          <a class="contact-item" href="mailto:bic4907@gist.ac.kr">
+            <span class="contact-item-icon">✉️</span>
+            <div>
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-text">bic4907@gist.ac.kr</span>
+            </div>
+          </a>
+          <a class="contact-item" href="https://scholar.google.com/citations?user=WlSkcAYAAAAJ" target="_blank">
+            <span class="contact-item-icon">🎓</span>
+            <div>
+              <span class="contact-item-label">Google Scholar</span>
+              <span class="contact-item-text">Inchang Baek</span>
+            </div>
+          </a>
+          <a class="contact-item" href="https://github.com/bic4907" target="_blank">
+            <span class="contact-item-icon">💻</span>
+            <div>
+              <span class="contact-item-label">GitHub</span>
+              <span class="contact-item-text">@bic4907</span>
+            </div>
+          </a>
+          <div class="contact-item" style="cursor:default;">
+            <span class="contact-item-icon">📍</span>
+            <div>
+              <span class="contact-item-label">Location</span>
+              <span class="contact-item-text">AI Graduate School, GIST<br/>Gwangju, South Korea</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form fade-up">
+        <h3>Send a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Research collaboration, etc." />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">메시지 보내기</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <p>© 2025 Inchang Baek · AI Graduate School, GIST ·
+    <a href="https://scholar.google.com/citations?user=WlSkcAYAAAAJ" target="_blank">Google Scholar</a> ·
+    <a href="https://github.com/bic4907" target="_blank">GitHub</a>
+  </p>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
+
