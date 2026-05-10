@@ -1,0 +1,524 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Research Statement – Inchang Baek</title>
+  <meta name="author" content="Inchang Baek">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    body { font-family: 'Georgia', serif; color: #222; }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+
+    /* ── Nav ── */
+    nav { margin-bottom: 48px; }
+    nav a { color: #555; text-decoration: none; font-size: 14px; margin-right: 20px; font-family: sans-serif; }
+    nav a:hover { color: #000; }
+    nav a.active { color: #000; font-weight: bold; border-bottom: 2px solid #000; padding-bottom: 2px; }
+
+    /* ── Hero / Flood Section ── */
+    .hero {
+      width: 100%;
+      background: #111827;
+      color: #f9fafb;
+      padding: 0 0 0;
+    }
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 24px 52px;
+    }
+    .hero nav a { color: #9ca3af; }
+    .hero nav a:hover { color: #f9fafb; }
+    .hero .section-label { color: #9ca3af; margin-bottom: 8px; }
+    .hero h1 { font-size: 32px; color: #f9fafb; margin: 0 0 20px; }
+    .hero p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #d1d5db;
+      max-width: 720px;
+      margin: 0 0 32px;
+    }
+    .hero p strong { color: #f9fafb; }
+    .hero p em { color: #c4b5fd; font-style: italic; }
+
+    /* ── Vision quote inside hero ── */
+    .hero-quote {
+      border-left: 3px solid #6366f1;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 0 8px 8px 0;
+      max-width: 680px;
+    }
+    .hero-quote p {
+      margin: 0;
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: #e5e7eb;
+      font-style: italic;
+    }
+
+    /* ── Section Headers ── */
+    .section-label {
+      font-family: sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    h2.section-title {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 6px;
+    }
+    .section-desc {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 28px;
+      max-width: 700px;
+    }
+
+    /* ── Timeline / Arrow ── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .timeline-step {
+      display: flex;
+      gap: 0;
+      margin-bottom: 0;
+    }
+    .timeline-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 36px;
+      flex-shrink: 0;
+    }
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #333;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+    .timeline-line {
+      width: 2px;
+      background: #ccc;
+      flex: 1;
+      min-height: 32px;
+    }
+    .timeline-step:last-child .timeline-line { display: none; }
+
+    /* ── Timeline / Arrow ── */
+    .paper-card {
+      flex: 1;
+      padding: 0 0 40px 20px;
+    }
+    .paper-card .step-label {
+      font-family: sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 4px;
+    }
+    .paper-card h3 {
+      font-size: 18px;
+      margin: 0 0 6px;
+      line-height: 1.35;
+    }
+    .paper-card .tagline {
+      font-size: 14px;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .paper-media {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .paper-media img, .paper-media .media-slot {
+      width: 200px;
+      max-width: 200px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      object-fit: cover;
+    }
+    .paper-media .gif-wrap {
+      position: relative;
+      width: 200px;
+    }
+    .paper-media .gif-wrap img.static { width: 100%; border-radius: 6px; border: 1px solid #ddd; }
+    .paper-media .gif-wrap img.hover-gif {
+      position: absolute; top: 0; left: 0; width: 100%;
+      border-radius: 6px; border: 1px solid #ddd;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .paper-media .gif-wrap:hover img.hover-gif { opacity: 1; }
+    .paper-media .gif-wrap:hover img.static { opacity: 0; }
+
+    .paper-body { flex: 1; min-width: 220px; }
+    .paper-body p { font-size: 14.5px; line-height: 1.8; color: #333; margin: 0 0 10px; }
+
+    .paper-meta { font-family: sans-serif; font-size: 13px; color: #555; margin-bottom: 8px; }
+    .paper-meta em { font-style: normal; color: #333; }
+
+    .paper-links a {
+      font-family: sans-serif;
+      font-size: 13px;
+      color: #1a0dab;
+      text-decoration: none;
+      margin-right: 14px;
+    }
+    .paper-links a:hover { text-decoration: underline; }
+
+    .tag { display:inline-block; padding:2px 8px; margin:2px 2px 2px 0; border-radius:4px; font-size:11px; font-weight:600; font-family: sans-serif; line-height:1.4; }
+    .tag-rl  { background:#ffedd5; color:#c2410c; }
+    .tag-llm { background:#fce7f3; color:#be185d; }
+    .tag-mm  { background:#dbeafe; color:#1e40af; }
+    .tag-marl{ background:#fae8ff; color:#86198f; }
+
+    /* ── Key Insight Box ── */
+    .insight {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      color: #444;
+      margin-top: 10px;
+      font-family: sans-serif;
+      line-height: 1.7;
+    }
+    .insight strong { color: #92400e; }
+
+    /* ── Big Arrow between phases ── */
+    .phase-arrow {
+      text-align: center;
+      font-size: 22px;
+      color: #bbb;
+      margin: 4px 0 4px 56px;
+      line-height: 1;
+    }
+
+    /* ── Future section ── */
+    .future-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-top: 56px;
+    }
+    .future-box h2 { font-size: 20px; margin-top: 0; margin-bottom: 10px; }
+    .future-box p { font-size: 14.5px; line-height: 1.8; color: #333; margin: 0; }
+
+    /* ── References ── */
+    .ref-sup {
+      font-family: sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #6366f1;
+      text-decoration: none;
+      margin-left: 4px;
+      vertical-align: super;
+      line-height: 0;
+    }
+    .ref-sup:hover { text-decoration: underline; }
+
+    /* Full-width references section (like hero) */
+    .references-section {
+      width: 100%;
+      background: #1e293b;
+    }
+    .references-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 52px 24px 60px;
+    }
+    .references-inner h2 {
+      font-size: 11px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #94a3b8;
+      margin: 0 0 20px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .references-inner ol {
+      padding-left: 1.4em;
+      margin: 0;
+    }
+    .references-inner li {
+      font-family: sans-serif;
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+    .references-inner li strong { color: #f1f5f9; }
+    .references-inner li em { color: #94a3b8; font-style: italic; }
+    .references-inner li a {
+      color: #818cf8;
+      text-decoration: none;
+    }
+    .references-inner li a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .paper-media { flex-direction: column; }
+      .paper-media .gif-wrap, .paper-media img { width: 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero (full-width) -->
+  <div class="hero">
+    <div class="hero-inner">
+      <nav>
+        <a href="index.html">← Home</a>
+      </nav>
+      <div class="section-label" id="t-label">Inchang Baek · Ph.D. Candidate &nbsp;·&nbsp; <span style="font-weight:400;letter-spacing:0;">Last updated: May 2026</span></div>
+      <h1 id="t-h1">Research Statement</h1>
+      <p id="t-intro">
+        Standard RL agents are powerful optimizers, but they face key limitations
+        when AI must work alongside people.
+        First, they <em>offer limited mechanisms for human communication</em>:
+        standard RL agents do not natively support natural-language instructions
+        at inference time—expressing new goals or correcting behavior typically
+        requires modifying the reward function and retraining from scratch.
+        Second, even when objectives are carefully specified,
+        the behavior distributions RL agents learn can be
+        <em>misaligned with human intent</em>: optimizing a proxy reward
+        may produce policies whose outputs diverge from what a human
+        would recognize as correct or desirable.
+        My research addresses both challenges through
+        <strong>language-conditioned policy learning</strong> and
+        <strong>intent-aligned generation</strong>, using procedural content
+        generation (PCG) as a structured testbed where misalignment
+        between specification and output is directly measurable.
+      </p>
+      <div class="hero-quote">
+        <p id="t-quote">"Can a single policy, conditioned on natural language, satisfy diverse
+        objectives at inference time—without reward re-engineering—and transfer
+        its learned representation to structurally distinct environments it has
+        never been trained on?"</p>
+      </div>
+    </div>
+  </div>
+
+<div class="page-wrap">
+
+  <!-- ══════════════════════════════════════════
+       RESEARCH LINE
+  ══════════════════════════════════════════ -->
+
+  <div class="section-label" id="t-thrust-label" style="margin-bottom:8px;">Research Thrusts</div>
+  <div class="section-desc" id="t-thrust-desc">
+    Three thrusts of generalization in language-conditioned RL:
+    (i) <em>reward-free policy conditioning</em> via natural-language goal specifications;
+    (ii) <em>multi-modal conditioning</em> to reduce semantic underspecification; and
+    (iii) a <em>cross-environment shared encoder</em> for language-guided latent interpolation.
+  </div>
+
+  <div class="timeline">
+
+    <!-- ───────────────────────────────────────
+         Step 1 · Language as the Interface
+    ─────────────────────────────────────── -->
+    <div class="timeline-step">
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="paper-card">
+        <div class="step-label" id="t-thrust1-label">Thrust 1 · Language-Conditioned Policy</div>
+        <h3 id="t-thrust1-h3">Natural Language as a Goal Specification Mechanism for Reward-Free Policy Conditioning</h3>
+        <div class="tagline" id="t-thrust1-tagline">
+          Can natural language replace a fixed reward function—conditioning policy behavior at inference time, without retraining?
+        </div>
+
+        <div class="paper-media">
+          <div class="gif-wrap">
+            <img class="static" src="images/papers/ipcgrl/preview/img.png" alt="IPCGRL preview">
+            <img class="hover-gif" src="images/papers/ipcgrl/video.gif" alt="IPCGRL demo">
+          </div>
+          <div class="paper-body">
+            <p id="t-thrust1-p1">
+              Standard RL policies are coupled to a fixed training objective and
+              do not readily generalize to novel goals without retraining.
+              We address this by conditioning the policy directly on language:
+              a natural-language instruction is encoded by a pre-trained language
+              model and injected as a conditioning signal into the policy network,
+              producing behaviorally distinct outputs by varying the instruction
+              alone—without retraining at inference time <a class="ref-sup" href="#ref-1">[1]</a>.
+            </p>
+            <p id="t-thrust1-p2">
+              We extend this to the <strong>multi-objective setting</strong>: rather than
+              collapsing competing objectives into a scalar reward, we learn a
+              disentangled instruction representation that encourages objectives to
+              occupy separable subspaces. This allows the policy to explore
+              trade-offs across conflicting constraints by interpolating within
+              the instruction embedding space, without retraining for each
+              configuration <a class="ref-sup" href="#ref-2">[2]</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────────────────────────────────
+         Step 2 · Modality Expansion
+    ─────────────────────────────────────── -->
+    <div class="timeline-step">
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="paper-card">
+        <div class="step-label" id="t-thrust2-label">Thrust 2 · Multi-Modal Policy Conditioning</div>
+        <h3 id="t-thrust2-h3">Reducing Semantic Underspecification via Tri-Modal Shared Representation</h3>
+        <div class="tagline" id="t-thrust2-tagline">
+          Language alone is ambiguous. Adding a complementary visual modality sharpens policy conditioning and reduces output variance.
+        </div>
+
+        <div class="paper-media">
+          <img src="images/papers/human_aligned.png" alt="Human-Aligned preview" style="width:200px;max-width:200px;border-radius:6px;border:1px solid #ddd;">
+          <div class="paper-body">
+            <p id="t-thrust2-p1">
+              A text prompt is semantically underspecified: the same instruction is
+              consistent with many distinct output distributions, limiting the
+              precision of language-only conditioning.
+              We address this by constructing a <strong>tri-modal shared representation</strong>
+              that jointly embeds three signal types—natural-language instructions,
+              spatial layout observations, and output trajectories—into a unified
+              metric space via contrastive objectives.
+            </p>
+            <p id="t-thrust2-p2">
+              The policy accepts any subset of available modalities as conditioning input;
+              the joint embedding space encourages representations from different
+              modalities corresponding to the same behavioral target to cluster together,
+              while semantically distinct targets are pushed apart. Combining text
+              and spatial modalities reduces output variance relative
+              to either modality alone in our evaluations, with human preference studies
+              confirming improved alignment between the specified objective and the
+              resulting behavior <a class="ref-sup" href="#ref-3">[3]</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────────────────────────────────
+         Step 3 · Domain Expansion
+    ─────────────────────────────────────── -->
+    <div class="timeline-step">
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="paper-card">
+        <div class="step-label" id="t-thrust3-label">Thrust 3 · Cross-Domain Transfer</div>
+        <h3 id="t-thrust3-h3">Cross-Environment Shared Encoder for Zero-Shot Latent Interpolation</h3>
+        <div class="tagline" id="t-thrust3-tagline">
+          Can one encoder generalize across structurally distinct environments—and support language-guided interpolation between them?
+        </div>
+
+        <div class="paper-media">
+          <div class="gif-wrap">
+            <img class="static" src="images/papers/multiverse.png" alt="Multiverse preview">
+            <img class="hover-gif" src="images/papers/text_blending_demo.gif" alt="Multiverse demo">
+          </div>
+          <div class="paper-body">
+            <p id="t-thrust3-p1">
+              Thrusts 1–2 operate within a single environment with fixed dynamics.
+              We generalize to the multi-task setting by training a shared encoder
+              simultaneously across multiple structurally distinct environments.
+              A cross-environment alignment objective brings latent representations
+              of semantically equivalent behavioral targets together across domains,
+              while preserving environment-specific structure elsewhere in the
+              embedding space.
+            </p>
+            <p id="t-thrust3-p2">
+              A language instruction then parameterizes a <strong>soft interpolation
+              over the shared latent space</strong>, producing outputs that
+              compositionally blend characteristics from distinct source environments—
+              without environment-specific fine-tuning <a class="ref-sup" href="#ref-4">[4]</a>.
+              We see this as a step toward compositional policy generalization:
+              extending the shared encoder to control policies could allow
+              language-guided latent interpolation to produce behavioral blends,
+              potentially supporting transfer to task combinations not seen during training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+
+
+</div><!-- /page-wrap -->
+
+
+<!-- References (full-width block) -->
+<div class="references-section">
+  <div class="references-inner">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1">
+        <strong>I.-C. Baek*</strong>, S.-H. Kim*, S.-Y. Lee, D.-H. Lee, K.-J. Kim.
+        "IPCGRL: Language-Instructed Reinforcement Learning for Procedural Level Generation."
+        <em>IEEE Conference on Games (CoG)</em>, 2025. (* Equal contribution)
+        &nbsp;[<a href="https://arxiv.org/abs/2503.12358" target="_blank">arXiv</a>]
+        [<a href="https://ieeexplore.ieee.org/document/11114105" target="_blank">paper</a>]
+      </li>
+      <li id="ref-2">
+        S.-H. Kim, G.-H. Hwang, <strong>I.-C. Baek</strong>, S.-Y. Lee, K.-J. Kim.
+        "Multi-Objective Instruction-Aware Representation Learning in Procedural Content Generation Reinforcement Learning."
+        <em>Accepted at IEEE Conference on Games (CoG)</em>, 2026.
+        &nbsp;[<a href="https://arxiv.org/abs/2508.09193" target="_blank">arXiv</a>]
+      </li>
+      <li id="ref-3">
+        <strong>I.-C. Baek*</strong>, S. Lee*, S.-H. Kim, G. Hwang, K.-J. Kim.
+        "Human-Aligned Procedural Level Generation Reinforcement Learning via Text-Level-Sketch Shared Representation."
+        <em>Under revision at IEEE Transactions on Games</em>, 2025. (* Equal contribution)
+        &nbsp;[<a href="https://arxiv.org/abs/2508.09860" target="_blank">arXiv</a>]
+      </li>
+      <li id="ref-4">
+        <strong>I.-C. Baek*</strong>, J. Jung*, S.-H. Kim, G.-H. Hwang, K.-J. Kim.
+        "Multiverse: Language-Conditioned Multi-Game Level Blending via Shared Representation."
+        <em>Accepted at IEEE Conference on Games (CoG)</em>, 2026. (* Equal contribution)
+        &nbsp;[<a href="https://arxiv.org/abs/2603.26782" target="_blank">arXiv</a>]
+        [<a href="https://github.com/bic4907/Multiverse-multigame-pcg" target="_blank">code</a>]
+      </li>
+      <li id="ref-5">
+        <strong>I.-C. Baek</strong>, S.-H. Kim, S. Earle, Z. Jiang, J.-H. Noh, J. Togelius, K.-J. Kim.
+        "PCGRLLM: Large Language Model-Driven Reward Design for Procedural Content Generation Reinforcement Learning."
+        <em>Under revision at IEEE Transactions on Games</em>, 2025.
+        &nbsp;[<a href="https://arxiv.org/abs/2502.10906" target="_blank">arXiv</a>]
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+</body>
+</html>
