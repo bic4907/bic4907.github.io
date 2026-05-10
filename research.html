@@ -299,28 +299,38 @@
       <div class="section-label" id="t-label">Inchang Baek · Ph.D. Candidate &nbsp;·&nbsp; <span style="font-weight:400;letter-spacing:0;">Last updated: May 2026</span></div>
       <h1 id="t-h1">Research Statement</h1>
       <p id="t-intro">
-        Standard RL agents are powerful optimizers, but they face key limitations
-        when AI must work alongside people.
-        First, they <em>offer limited mechanisms for human communication</em>:
-        standard RL agents do not natively support natural-language instructions
-        at inference time—expressing new goals or correcting behavior typically
-        requires modifying the reward function and retraining from scratch.
-        Second, even when objectives are carefully specified,
-        the behavior distributions RL agents learn can be
-        <em>misaligned with human intent</em>: optimizing a proxy reward
-        may produce policies whose outputs diverge from what a human
-        would recognize as correct or desirable.
-        My research addresses both challenges through
-        <strong>language-conditioned policy learning</strong> and
-        <strong>intent-aligned generation</strong>, using procedural content
-        generation (PCG) as a structured testbed where misalignment
-        between specification and output is directly measurable.
+        My research asks a central question:
+        <strong>how can RL agents interpret and generalize human intent across
+        tasks, modalities, and environments—without manually engineered rewards?</strong>
+        Standard RL produces capable optimizers, but two fundamental gaps
+        limit their deployment alongside people.
+        First, they <em>lack any channel for human communication</em>:
+        goals must be hand-coded at training time, with no mechanism for
+        receiving or acting on natural-language instructions at inference.
+        Second, even carefully specified objectives can produce
+        <em>behavior distributions misaligned with what humans actually want</em>:
+        proxy rewards are optimized faithfully, yet the resulting outputs
+        routinely diverge from human expectations.
+        I address both gaps through
+        <strong>instruction-conditioned policy learning</strong>,
+        <strong>multimodal behavioral grounding</strong>, and
+        <strong>compositional cross-environment generalization</strong>.
+      </p>
+      <p id="t-intro2" style="margin-top: 0;">
+        Procedural content generation (PCG) for games serves as the primary experimental substrate—
+        not as the end goal, but because it offers
+        <em>uniquely controllable and measurable conditions</em> for studying these problems.
+        Game environments provide structured procedural variation, precise evaluation metrics,
+        and a direct observable gap between a specified intent and a generated output.
+        This makes them ideal for developing and stress-testing methods in
+        controllability, semantic grounding, and compositional adaptation—
+        capabilities that matter well beyond the gaming domain.
       </p>
       <div class="hero-quote">
-        <p id="t-quote">"Can a single policy, conditioned on natural language, satisfy diverse
-        objectives at inference time—without reward re-engineering—and transfer
-        its learned representation to structurally distinct environments it has
-        never been trained on?"</p>
+        <p id="t-quote">"Can a single policy, conditioned on natural language, achieve
+        continuous behavioral adaptation at inference time—without reward re-engineering—
+        and transfer its grounded representation to environments and task combinations
+        it has never encountered during training?"</p>
       </div>
     </div>
   </div>
@@ -333,10 +343,12 @@
 
   <div class="section-label" id="t-thrust-label" style="margin-bottom:8px;">Research Thrusts</div>
   <div class="section-desc" id="t-thrust-desc">
-    Three thrusts of generalization in language-conditioned RL:
-    (i) <em>reward-free policy conditioning</em> via natural-language goal specifications;
-    (ii) <em>multi-modal conditioning</em> to reduce semantic underspecification; and
-    (iii) a <em>cross-environment shared encoder</em> for language-guided latent interpolation.
+    Three connected thrusts—each a partial answer to the central question above—
+    progressively extend the scope of controllability and generalization:
+    (i) <em>inference-time behavioral control</em> via semantically structured instruction representations;
+    (ii) <em>multimodal grounding</em> to resolve the inherent underspecification of language-only conditioning; and
+    (iii) <em>compositional cross-environment transfer</em> through a unified latent space that
+    supports recombination and adaptation across structurally distinct domains.
   </div>
 
   <div class="timeline">
@@ -350,10 +362,10 @@
         <div class="timeline-line"></div>
       </div>
       <div class="paper-card">
-        <div class="step-label" id="t-thrust1-label">Thrust 1 · Language-Conditioned Policy</div>
-        <h3 id="t-thrust1-h3">Natural Language as a Goal Specification Mechanism for Reward-Free Policy Conditioning</h3>
+        <div class="step-label" id="t-thrust1-label">Thrust 1 · Inference-Time Behavioral Control</div>
+        <h3 id="t-thrust1-h3">Semantically Structured Instruction Representations for Reward-Free Policy Adaptation</h3>
         <div class="tagline" id="t-thrust1-tagline">
-          Can natural language replace a fixed reward function—conditioning policy behavior at inference time, without retraining?
+          Can natural language serve as a continuous behavioral specification—enabling a single policy to adapt its behavior at inference time without any reward re-engineering?
         </div>
 
         <div class="paper-media">
@@ -363,22 +375,26 @@
           </div>
           <div class="paper-body">
             <p id="t-thrust1-p1">
-              Standard RL policies are coupled to a fixed training objective and
-              do not readily generalize to novel goals without retraining.
-              We address this by conditioning the policy directly on language:
-              a natural-language instruction is encoded by a pre-trained language
-              model and injected as a conditioning signal into the policy network,
-              producing behaviorally distinct outputs by varying the instruction
-              alone—without retraining at inference time <a class="ref-sup" href="#ref-1">[1]</a>.
+              Standard RL policies are coupled to a fixed training objective:
+              adapting to a new goal requires modifying the reward function and
+              retraining from scratch, with no mechanism for receiving human
+              instruction at deployment time.
+              We address this by conditioning the policy on a
+              <strong>semantically structured instruction embedding</strong>—
+              encoded from a natural-language specification and injected
+              directly into the policy network—so that varying the instruction
+              alone continuously steers behavior at inference time,
+              without any gradient update <a class="ref-sup" href="#ref-1">[1]</a>.
             </p>
             <p id="t-thrust1-p2">
-              We extend this to the <strong>multi-objective setting</strong>: rather than
-              collapsing competing objectives into a scalar reward, we learn a
-              disentangled instruction representation that encourages objectives to
-              occupy separable subspaces. This allows the policy to explore
-              trade-offs across conflicting constraints by interpolating within
-              the instruction embedding space, without retraining for each
-              configuration <a class="ref-sup" href="#ref-2">[2]</a>.
+              The approach extends naturally to the <strong>multi-objective setting</strong>.
+              Rather than collapsing competing objectives into a scalar,
+              we learn a disentangled representation that encourages each objective
+              dimension to occupy a separable subspace.
+              The policy can then traverse trade-offs across conflicting constraints
+              by interpolating within the instruction space—
+              continuously navigating the behavioral specification
+              without retraining for individual configurations <a class="ref-sup" href="#ref-2">[2]</a>.
             </p>
           </div>
         </div>
@@ -394,33 +410,36 @@
         <div class="timeline-line"></div>
       </div>
       <div class="paper-card">
-        <div class="step-label" id="t-thrust2-label">Thrust 2 · Multi-Modal Policy Conditioning</div>
-        <h3 id="t-thrust2-h3">Reducing Semantic Underspecification via Tri-Modal Shared Representation</h3>
+        <div class="step-label" id="t-thrust2-label">Thrust 2 · Multimodal Grounding</div>
+        <h3 id="t-thrust2-h3">Resolving Behavioral Underspecification via Tri-Modal Contrastive Grounding</h3>
         <div class="tagline" id="t-thrust2-tagline">
-          Language alone is ambiguous. Adding a complementary visual modality sharpens policy conditioning and reduces output variance.
+          Language is inherently underspecified. Grounding a policy in complementary perceptual modalities sharpens intent resolution and reduces output variance.
         </div>
 
         <div class="paper-media">
           <img src="images/papers/human_aligned.png" alt="Human-Aligned preview" style="width:200px;max-width:200px;border-radius:6px;border:1px solid #ddd;">
           <div class="paper-body">
             <p id="t-thrust2-p1">
-              A text prompt is semantically underspecified: the same instruction is
-              consistent with many distinct output distributions, limiting the
-              precision of language-only conditioning.
-              We address this by constructing a <strong>tri-modal shared representation</strong>
-              that jointly embeds three signal types—natural-language instructions,
-              spatial layout observations, and output trajectories—into a unified
-              metric space via contrastive objectives.
+              A natural-language prompt is consistent with many distinct output
+              distributions—the same instruction can reasonably describe
+              very different behaviors, leaving the policy underspecified.
+              We address this through a <strong>tri-modal contrastive grounding</strong>
+              framework that jointly embeds three signal types—
+              natural-language instructions, spatial layout observations,
+              and output trajectories—into a unified metric space.
+              The contrastive objective pulls together representations from
+              different modalities that correspond to the same behavioral target,
+              while pushing apart representations of distinct targets.
             </p>
             <p id="t-thrust2-p2">
-              The policy accepts any subset of available modalities as conditioning input;
-              the joint embedding space encourages representations from different
-              modalities corresponding to the same behavioral target to cluster together,
-              while semantically distinct targets are pushed apart. Combining text
-              and spatial modalities reduces output variance relative
-              to either modality alone in our evaluations, with human preference studies
-              confirming improved alignment between the specified objective and the
-              resulting behavior <a class="ref-sup" href="#ref-3">[3]</a>.
+              The policy accepts any available subset of modalities as input,
+              allowing flexible deployment under partial observability.
+              Combining text with spatial observations resolves
+              much of the ambiguity that language alone cannot eliminate,
+              reducing output variance in our evaluations.
+              Human preference studies confirm that the grounded policy
+              produces behavior that more faithfully matches the
+              specified intent than single-modality baselines <a class="ref-sup" href="#ref-3">[3]</a>.
             </p>
           </div>
         </div>
@@ -436,10 +455,10 @@
         <div class="timeline-line"></div>
       </div>
       <div class="paper-card">
-        <div class="step-label" id="t-thrust3-label">Thrust 3 · Cross-Domain Transfer</div>
-        <h3 id="t-thrust3-h3">Cross-Environment Shared Encoder for Zero-Shot Latent Interpolation</h3>
+        <div class="step-label" id="t-thrust3-label">Thrust 3 · Compositional Cross-Environment Transfer</div>
+        <h3 id="t-thrust3-h3">A Unified Latent Space for Language-Guided Recombination Across Structurally Distinct Environments</h3>
         <div class="tagline" id="t-thrust3-tagline">
-          Can one encoder generalize across structurally distinct environments—and support language-guided interpolation between them?
+          Can a single encoder learn a representation that transfers, interpolates, and recombines behaviors across environments never seen together during training?
         </div>
 
         <div class="paper-media">
@@ -449,23 +468,31 @@
           </div>
           <div class="paper-body">
             <p id="t-thrust3-p1">
-              Thrusts 1–2 operate within a single environment with fixed dynamics.
-              We generalize to the multi-task setting by training a shared encoder
-              simultaneously across multiple structurally distinct environments.
-              A cross-environment alignment objective brings latent representations
-              of semantically equivalent behavioral targets together across domains,
-              while preserving environment-specific structure elsewhere in the
-              embedding space.
+              Thrusts 1–2 operate within a single environment.
+              The harder question is whether a shared representation can
+              capture structural regularities across <em>multiple distinct environments</em>
+              and make those regularities accessible for reuse.
+              We train a single encoder jointly across structurally distinct domains
+              under a cross-environment alignment objective that draws together
+              latent representations of behaviorally equivalent targets,
+              while preserving environment-specific structure where needed.
+              The result is a <strong>unified embedding space that supports transfer</strong>:
+              knowledge acquired in one environment can be directly accessed and
+              reused in another without fine-tuning.
             </p>
             <p id="t-thrust3-p2">
-              A language instruction then parameterizes a <strong>soft interpolation
-              over the shared latent space</strong>, producing outputs that
-              compositionally blend characteristics from distinct source environments—
-              without environment-specific fine-tuning <a class="ref-sup" href="#ref-4">[4]</a>.
-              We see this as a step toward compositional policy generalization:
-              extending the shared encoder to control policies could allow
-              language-guided latent interpolation to produce behavioral blends,
-              potentially supporting transfer to task combinations not seen during training.
+              A language instruction then parameterizes
+              <strong>soft interpolation within this shared space</strong>,
+              producing outputs that compositionally blend characteristics
+              from distinct source environments—enabling
+              zero-shot recombination of behaviors not seen in any single
+              training domain <a class="ref-sup" href="#ref-4">[4]</a>.
+              This compositional structure is the foundation for
+              the broader agenda: extending the same shared encoder to
+              control policies could allow language-guided latent interpolation
+              to directly produce behavioral blends across tasks,
+              potentially enabling open-ended adaptation to
+              novel task combinations at inference time.
             </p>
           </div>
         </div>
@@ -474,6 +501,40 @@
 
   </div><!-- /timeline -->
 
+  <!-- ══════════════════════════════════════════
+       FUTURE DIRECTIONS
+  ══════════════════════════════════════════ -->
+  <div class="future-box">
+    <div class="section-label" style="margin-bottom:10px;">Looking Forward</div>
+    <h2>Toward General-Purpose Instruction-Following Agents</h2>
+    <p>
+      The three thrusts above are stepping stones toward a broader agenda:
+      building agents that can interpret human intent across an open-ended range
+      of tasks, modalities, and environments—without task-specific reward engineering
+      or environment-specific fine-tuning.
+    </p>
+    <p style="margin-top:12px;">
+      Several directions follow naturally from this foundation.
+      <strong>Embodied and interactive settings</strong>—where agents must ground
+      language in physical observations and act in real time—present a natural
+      extension, connecting this work to vision-language-action (VLA) systems
+      and tactile grounding.
+      <strong>Open-ended compositional generalization</strong> asks whether the
+      shared latent structures developed here can scale to larger numbers of
+      tasks and modalities, enabling agents that genuinely recombine learned
+      behaviors rather than memorizing fixed combinations.
+      More broadly, the controllability mechanisms developed in this
+      line of work—semantically structured embeddings, multimodal grounding,
+      cross-domain transfer—are not restricted to generative settings:
+      they apply wherever an AI system must interpret and act on
+      human instruction in a way that is verifiable, steerable, and
+      robust to distributional shift.
+      The long-term goal is a principled framework for
+      <strong>scalable, instruction-driven alignment</strong> in
+      interactive agents—one that does not require human supervision
+      at every new task boundary.
+    </p>
+  </div>
 
 </div><!-- /page-wrap -->
 
