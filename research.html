@@ -220,16 +220,32 @@
       line-height: 1;
     }
 
-    /* ── Future section ── */
-    .future-box {
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-radius: 8px;
-      padding: 24px 28px;
-      margin-top: 56px;
+    /* ── Future section (full-width, same as hero) ── */
+    .future-section {
+      width: 100%;
+      background: #111827;
+      color: #f9fafb;
     }
-    .future-box h2 { font-size: 20px; margin-top: 0; margin-bottom: 10px; }
-    .future-box p { font-size: 14.5px; line-height: 1.8; color: #333; margin: 0; }
+    .future-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 52px 24px 60px;
+    }
+    .future-inner h2 {
+      font-size: 26px;
+      color: #f9fafb;
+      margin: 0 0 20px;
+      font-weight: 600;
+    }
+    .future-inner p {
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: #d1d5db;
+      max-width: 720px;
+      margin: 0 0 20px;
+    }
+    .future-inner p:last-child { margin-bottom: 0; }
+    .future-inner p strong { color: #f9fafb; }
 
     /* ── References ── */
     .ref-sup {
@@ -501,11 +517,14 @@
 
   </div><!-- /timeline -->
 
-  <!-- ══════════════════════════════════════════
-       FUTURE DIRECTIONS
-  ══════════════════════════════════════════ -->
-  <div class="future-box">
-    <div class="section-label" style="margin-bottom:10px;">Looking Forward</div>
+  </div><!-- /timeline -->
+
+</div><!-- /page-wrap -->
+
+<!-- Looking Forward (full-width block) -->
+<div class="future-section">
+  <div class="future-inner">
+    <div class="section-label" style="color:#9ca3af; margin-bottom:10px;">Looking Forward</div>
     <h2>Toward General-Purpose Instruction-Following Agents</h2>
     <p>
       The three thrusts above are stepping stones toward a broader agenda:
@@ -513,7 +532,7 @@
       of tasks, modalities, and environments—without task-specific reward engineering
       or environment-specific fine-tuning.
     </p>
-    <p style="margin-top:12px;">
+    <p>
       Several directions follow naturally from this foundation.
       <strong>Embodied and interactive settings</strong>—where agents must ground
       language in physical observations and act in real time—present a natural
@@ -535,8 +554,7 @@
       at every new task boundary.
     </p>
   </div>
-
-</div><!-- /page-wrap -->
+</div>
 
 
 <!-- References (full-width block) -->
