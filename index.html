@@ -35,6 +35,33 @@
       .tag-ga { background:#d1fae5; color:#065f46; }
       .tag-mm { background:#dbeafe; color:#1e40af; }
       .tag-marl { background:#fae8ff; color:#86198f; }
+
+      /* ── Research Statement highlight link ── */
+      .rs-link {
+        font-weight: 700;
+        color: #1e1b4b;
+        text-decoration: none;
+        background-image: linear-gradient(120deg, #c7d2fe 0%, #a5b4fc 100%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        padding: 1px 4px;
+        border-radius: 2px;
+        transition: background-size 0.35s ease, color 0.25s ease;
+      }
+      .rs-link:hover {
+        color: #1e1b4b;
+        background-size: 100% 100%;
+      }
+      /* fill animation: start with slim underline, expand to full on hover */
+      .rs-link {
+        background-size: 100% 35%;
+        background-position: 0 100%;
+      }
+      .rs-link:hover {
+        background-size: 100% 100%;
+        background-position: 0 100%;
+      }
     </style>
 
   </head>
@@ -54,7 +81,7 @@
                 <p>
                   I'm an integrated M.S.-Ph.D. candidate at the <a href="https://ai.gist.ac.kr/">AI Graduate School</a> of <a href="https://www.gist.ac.kr/">Gwangju Institute of Science and Technology (GIST)</a>, advised by <a href="https://cilab.gist.ac.kr/hp/current-member/">Prof. Kyung-Joong Kim</a>.
                   My research sits at the intersection of <strong>reinforcement learning</strong> and <strong>human-AI interaction</strong>—specifically, developing methods that let RL agents receive natural-language instructions and produce outputs that align with human intent, using <strong>procedural content generation (PCG)</strong> as a structured testbed.
-                  For a detailed account of the research agenda, see my <a href="research.html" style="font-weight:700;color:#1e1b4b;background:linear-gradient(120deg,#c7d2fe 0%,#a5b4fc 100%);padding:1px 4px;border-radius:2px;text-decoration:none;">research statement</a>.
+                  For a detailed account of the research agenda, see my <a href="research.html" class="rs-link">research statement</a>.
                 </p>
                 <p>
                   Previously, I was a research intern at <a href="https://krafton.ai/">KRAFTON AI</a>.
