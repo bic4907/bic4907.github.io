@@ -1,3 +1,15 @@
+// ===== Page Transition =====
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (!link) return;
+  const href = link.getAttribute('href');
+  // only internal same-origin .html links
+  if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.target === '_blank') return;
+  e.preventDefault();
+  document.body.classList.add('page-exit');
+  setTimeout(() => { window.location.href = href; }, 250);
+});
+
 // ===== Theme Toggle =====
 const themeToggle = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
