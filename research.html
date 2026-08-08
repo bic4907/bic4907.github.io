@@ -312,7 +312,7 @@
       <nav>
         <a href="index.html">← Home</a>
       </nav>
-      <div class="section-label" id="t-label">Inchang Baek · Ph.D. Candidate &nbsp;·&nbsp; <span style="font-weight:400;letter-spacing:0;">Last updated: May 2026</span></div>
+      <div class="section-label" id="t-label">Inchang Baek · Ph.D. Candidate &nbsp;·&nbsp; <span style="font-weight:400;letter-spacing:0;">Last updated: Aug 2026</span></div>
       <h1 id="t-h1">Research Statement</h1>
       <p id="t-intro">
         My research asks a central question:
@@ -330,7 +330,7 @@
         I address both gaps through
         <strong>instruction-conditioned policy learning</strong>,
         <strong>multimodal behavioral grounding</strong>, and
-        <strong>compositional cross-environment generalization</strong>.
+        <strong>cross-domain reward transfer</strong>.
       </p>
       <p id="t-intro2" style="margin-top: 0;">
         Procedural content generation (PCG) for games serves as the primary experimental substrate—
@@ -345,8 +345,8 @@
       <div class="hero-quote">
         <p id="t-quote">"Can a single policy, conditioned on natural language, achieve
         continuous behavioral adaptation at inference time—without reward re-engineering—
-        and transfer its grounded representation to environments and task combinations
-        it has never encountered during training?"</p>
+        and transfer its grounded reward knowledge to new environments where
+        direct supervision is sparse?"</p>
       </div>
     </div>
   </div>
@@ -363,8 +363,8 @@
     progressively extend the scope of controllability and generalization:
     (i) <em>inference-time behavioral control</em> via semantically structured instruction representations;
     (ii) <em>multimodal grounding</em> to resolve the inherent underspecification of language-only conditioning; and
-    (iii) <em>compositional cross-environment transfer</em> through a unified latent space that
-    supports recombination and adaptation across structurally distinct domains.
+    (iii) <em>cross-domain reward transfer</em> through aligned representation directions that
+    support adaptation across sparsely supervised target domains.
   </div>
 
   <div class="timeline">
@@ -471,44 +471,39 @@
         <div class="timeline-line"></div>
       </div>
       <div class="paper-card">
-        <div class="step-label" id="t-thrust3-label">Thrust 3 · Compositional Cross-Environment Transfer</div>
-        <h3 id="t-thrust3-h3">A Unified Latent Space for Language-Guided Recombination Across Structurally Distinct Environments</h3>
+        <div class="step-label" id="t-thrust3-label">Thrust 3 · Cross-Domain Reward Transfer</div>
+        <h3 id="t-thrust3-h3">Transferring Instruction Grounding Across Domains Under Sparse Reward Supervision</h3>
         <div class="tagline" id="t-thrust3-tagline">
-          Can a single encoder learn a representation that transfers, interpolates, and recombines behaviors across environments never seen together during training?
+          Can representation directions learned from source games estimate executable rewards in target domains while preserving domain-specific semantics?
         </div>
 
         <div class="paper-media">
-          <div class="gif-wrap">
-            <img class="static" src="images/papers/multiverse.png" alt="Multiverse preview">
-            <img class="hover-gif" src="images/papers/text_blending_demo.gif" alt="Multiverse demo">
-          </div>
+          <img src="images/papers/reward.png" alt="ReWARD overview">
           <div class="paper-body">
             <p id="t-thrust3-p1">
-              Thrusts 1–2 operate within a single environment.
-              The harder question is whether a shared representation can
-              capture structural regularities across <em>multiple distinct environments</em>
-              and make those regularities accessible for reuse.
-              We train a single encoder jointly across structurally distinct domains
-              under a cross-environment alignment objective that draws together
-              latent representations of behaviorally equivalent targets,
-              while preserving environment-specific structure where needed.
-              The result is a <strong>unified embedding space that supports transfer</strong>:
-              knowledge acquired in one environment can be directly accessed and
-              reused in another without fine-tuning.
+              Thrusts 1–2 establish how a policy can interpret human intent
+              within a controlled domain. ReWARD asks the next question:
+              how can an instruction-conditioned generator adapt when a new
+              target domain provides only limited reward annotations?
+              We learn a domain-shared instruction–level representation and
+              align <strong>semantic representation directions</strong> across games,
+              so equivalent condition changes point in consistent directions
+              without erasing domain-specific scales or meanings.
+              A reward estimator then predicts rewards for unannotated
+              target-domain instructions, converting sparse language supervision
+              into executable signals for RL training <a class="ref-sup" href="#ref-4">[4]</a>.
             </p>
             <p id="t-thrust3-p2">
-              A language instruction then parameterizes
-              <strong>soft interpolation within this shared space</strong>,
-              producing outputs that compositionally blend characteristics
-              from distinct source environments—enabling
-              zero-shot recombination of behaviors not seen in any single
-              training domain <a class="ref-sup" href="#ref-4">[4]</a>.
-              This compositional structure is the foundation for
-              the broader agenda: extending the same shared encoder to
-              control policies could allow language-guided latent interpolation
-              to directly produce behavioral blends across tasks,
-              potentially enabling open-ended adaptation to
-              novel task combinations at inference time.
+              This reframes cross-domain generalization from simply blending
+              visible level characteristics to <strong>transferring reward knowledge</strong>
+              across structurally different games. Multiverse complements this
+              direction by showing that shared representations can also support
+              language-conditioned recombination and interpolation across game
+              environments <a class="ref-sup" href="#ref-5">[5]</a>. Together, these
+              results suggest a broader path toward reusable controllability:
+              shared latent structure can support both generative recombination
+              and policy adaptation, while ReWARD brings that structure back
+              into RL as predicted rewards for sparsely supervised domains.
             </p>
           </div>
         </div>
@@ -576,13 +571,18 @@
         [<a href="https://ieeexplore.ieee.org/document/11610890" target="_blank">paper</a>]
       </li>
       <li id="ref-4">
+        <strong>I.-C. Baek</strong>, G. Hwang, Z. Jiang, J. Togelius, K.-J. Kim.
+        "ReWARD: Cross-Domain Reward Estimation with Aligned Representation Directions for Level Generation via Reinforcement Learning."
+        <em>Under review</em>, 2026.
+      </li>
+      <li id="ref-5">
         <strong>I.-C. Baek*</strong>, J. Jung*, S.-H. Kim, G.-H. Hwang, K.-J. Kim.
         "Multiverse: Language-Conditioned Multi-Game Level Blending via Shared Representation."
         <em>Accepted at IEEE Conference on Games (CoG)</em>, 2026. (* Equal contribution)
         &nbsp;[<a href="https://arxiv.org/abs/2603.26782" target="_blank">arXiv</a>]
         [<a href="https://github.com/bic4907/Multiverse-multigame-pcg" target="_blank">code</a>]
       </li>
-      <li id="ref-5">
+      <li id="ref-6">
         <strong>I.-C. Baek</strong>, S.-H. Kim, S. Earle, Z. Jiang, J.-H. Noh, J. Togelius, K.-J. Kim.
         "PCGRLLM: Large Language Model-Driven Reward Design for Procedural Content Generation Reinforcement Learning."
         <em>IEEE Transactions on Games</em>, 2026.
